@@ -29,7 +29,7 @@ yelp
   .then(function (data){
       res.send(data);
   }).catch(console.error);
-)};
+});
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
