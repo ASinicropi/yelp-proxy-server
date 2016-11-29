@@ -13,7 +13,7 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/search', function(req, res){
+app.get('/business', function(req, res){
   console.log('testing');
 
 var yelp = new Yelp({
@@ -23,11 +23,13 @@ var yelp = new Yelp({
   token_secret: 'yuI_ubJANjmQw8fuVfoBp3ODyEQ',
 });
 
-var restaurants = req.query.restaurants;
-var location = req.query.location;
+//var restaurants = req.query.restaurants;
+//var location = req.query.location;
+
+var business = req.query.business;
 
 yelp
-  .search({ term: restaurants, location: location })
+  .business({ 'yelp-greenville' })
   .then(function (data){
       res.send(data);
   }).catch(console.error);
