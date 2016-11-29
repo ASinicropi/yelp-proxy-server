@@ -23,10 +23,12 @@ var yelp = new Yelp({
   token_secret: 'yuI_ubJANjmQw8fuVfoBp3ODyEQ',
 });
 
-var search = req.query.search;
+var restaurants = req.query.restaurants;
+var location = req.query.location;
+
 
 yelp
-  .search({term: 'restaurants', location: 'Greenville, SC'})
+  .search({term: 'restaurants', location: 'location'})
   .then(function (data){
       res.send(data);
   }).catch(console.error);
