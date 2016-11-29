@@ -26,9 +26,8 @@ var yelp = new Yelp({
 var restaurants = req.query.restaurants;
 var location = req.query.location;
 
-
 yelp
-  .search({term: 'restaurants', location: 'location'})
+  .search({ term: restaurants, location: location })
   .then(function (data){
       res.send(data);
   }).catch(console.error);
