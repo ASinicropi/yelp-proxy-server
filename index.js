@@ -28,8 +28,8 @@ yelp
   .search({term: 'restaurants', location: 'Greenville, SC'})
   .then(function (data){
       res.send(data);
-    }).catch(console.error);
- )};
+  }).catch(console.error);
+)};
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
