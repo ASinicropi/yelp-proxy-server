@@ -29,10 +29,9 @@ var yelp = new Yelp({
 var business = req.query.business;
 
 yelp
-  .business({ 'yelp-greenville' })
-  .then(function (data){
-      res.send(data);
-  }).catch(console.error);
+  .business('yelp-greenville')
+  .then(console.log)
+  .catch(console.error);
 });
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
