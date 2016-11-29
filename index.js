@@ -29,7 +29,7 @@ var yelp = new Yelp({
 var business = req.query.business;
 
 yelp
-  .business('id')
+  .business('yelp-san-francisco')
   .then(console.log)
   .catch(console.error);
 });
