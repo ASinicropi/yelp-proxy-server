@@ -12,7 +12,24 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
+app.get('/search', function(req, res){
+  console.log('testing');
 
+var yelp = new Yelp({
+  consumer_key: 'Hzr3VSFscgB31A5BkRm6Eg',
+  consumer_secret: 'hTU57lOnqFmc-inxI4-8V291QJ0',
+  token: 'enveednxnepSefZxKyfjN_iZ4UW9qwAs',
+  token_secret: 'yuI_ubJANjmQw8fuVfoBp3ODyEQ',
+});
+
+var search = req.query.search;
+
+yelp
+  .search({term: 'restaurants', location: 'Greenville, SC'})
+  .then(function (data){
+      res.send(data);
+    }).catch(console.error);
+ )};
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
