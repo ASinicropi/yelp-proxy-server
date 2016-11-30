@@ -24,10 +24,10 @@ var yelp = new Yelp({
 });
 
 var gluten_free  = req.query.gluten_fre;
-var greenville_sc = req.query.greenville_sc;
+var location = req.query.location;
 
 yelp
-  .search({ term: 'Gluten+Free', location: 'Greenville+SC' })
+  .search({ term: 'Gluten+Free', location: location })
   .then(function (data){
     res.send(data);
   }).catch(console.error);
