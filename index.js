@@ -23,7 +23,7 @@ var yelp = new Yelp({
   token_secret: 'yuI_ubJANjmQw8fuVfoBp3ODyEQ',
 });
 
-var restaurants = req.query.restaurants;
+var glutenfree = req.query.glutenfree;
 var location = req.query.location;
 
 yelp
