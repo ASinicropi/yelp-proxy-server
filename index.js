@@ -23,11 +23,11 @@ var yelp = new Yelp({
   token_secret: 'yuI_ubJANjmQw8fuVfoBp3ODyEQ',
 });
 
-var glutenfree = req.query.glutenfree;
+var gluten  = req.query.gluten;
 var location = req.query.location;
 
 yelp
-  .search({ term: glutenfree, location: location })
+  .search({ term: gluten, location: location })
   .then(function (data){
     res.send(data);
   }).catch(console.error);
