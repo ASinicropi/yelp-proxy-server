@@ -27,7 +27,7 @@ var restaurants = req.query.restaurants;
 var location = req.query.location;
 
 yelp
-  .search({ term: gluten free, location: location })
+  .search({ term: glutenfree, location: location })
   .then(function (data){
     res.send(data);
   }).catch(console.error);
